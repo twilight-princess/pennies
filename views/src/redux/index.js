@@ -7,6 +7,7 @@ const initialState = {
   currentUser: {
     username: ''
   },
+  messages: [],
   loggedIn: false
 }
 
@@ -17,6 +18,12 @@ const reducer = (prevState = initialState, action) => {
         ...prevState,
         loading: true
       }
+    case "SAVE_MESSAGE_HISTORY":
+      return {
+        ...prevState,
+        messages: [...prevState.messages, action.message],
+        loading: false
+      }
     default:
       return prevState
   }
@@ -24,10 +31,17 @@ const reducer = (prevState = initialState, action) => {
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
-store.describe(() => console.log(store.getState()));
+store.subscribe(() => console.log(store.getState()));
 
 //ACTION CREATORS
 
-
+export const saveMessageHistory = (message) => {
+  return dispatch => {
+    store.dispatch({
+      type: "SAVE_MESSAGE_HISTORY",
+      message: message
+    })
+  }
+}
 
 export default store;

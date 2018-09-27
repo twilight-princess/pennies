@@ -1,29 +1,23 @@
 import React, { Component } from 'react';
 
-//ROUTER
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-
-//REDUX
-import { Provider } from "react-redux";
-import store from "../../redux";
-
 //Components 
-import PennyNav from '../Nav/Nav'
-import Home from '../Home/Home'
+import PennyNav from '../Nav/PennyNav';
+import Home from '../Home/Home';
+import Chat from '../Chat/Chat';
+import Login from '../Login/Login';
+
+//CSS
+import './App.css';
 
 class App extends Component {
+  state = { isLoggedIn: true }
   render() {
     return (
-      <BrowserRouter>
-        <Provider store={store}>      
-            <Switch>
-              <PennyNav />
-              <Route path="/" exact component={Home} />
-              {/* <Route path="/card" component={SearchCards} /> */}
-
-            </Switch>
-        </Provider>
-      </BrowserRouter>
+      <div className="App">
+        <PennyNav />
+        <Home />
+        <Chat />
+      </div>
     );
   }
 }
