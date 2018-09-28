@@ -14,9 +14,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PennyNav />
-        <Home />
-        <Chat />
+        { this.state.isLoggedIn ? 
+          <div className="loggedIn">
+            <PennyNav />
+            <Home />
+            <Chat /> 
+          </div>
+          : <Login /> }
       </div>
     );
   }

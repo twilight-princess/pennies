@@ -1,9 +1,8 @@
 .App {
   display: grid;
   grid-gap: 15px;
-  grid-template-areas:  "n" "m" "f";
-  grid-template-rows: 1fr;
-  grid-template-rows: repeat(3, 30vh);
+  grid-template-areas:  "n" "m" "o" "t ""f";
+  grid-template-rows: 10vh 10vh auto 10vh 10vh;
   height: 100vh;
 }
 
@@ -15,6 +14,14 @@
   grid-area: m;
 }
 
-#send-chat {
+.chatOut {
+  grid-area: o;
+}
+
+.chatTyping {
+  grid-area: t;
+}
+
+#sendChat {
   grid-area: f;
 }

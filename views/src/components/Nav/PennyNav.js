@@ -16,13 +16,13 @@ class PennyNav extends Component {
   render() {
     return (
       <div className="PennyNav">
-        <Navbar color="faded" light>
+        <Navbar color="light" light>
           <NavbarBrand href="/" className="mr-auto">Penny</NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse isOpen={!this.state.collapsed} navbar>
               <Nav navbar>
                 <NavItem>
-                  <NavLink href="/components/">Components</NavLink>
+                  <NavLink href="/login/">Login</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
