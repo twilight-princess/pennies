@@ -17,7 +17,6 @@ class App extends Component {
         { this.state.isLoggedIn ? 
           <div className="loggedIn">
             <PennyNav />
-            <Home />
             <Chat /> 
           </div>
           : <Login /> }

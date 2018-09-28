@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ReactDOM } from 'react-dom';
 
+
 //CSS
 import './Chat.css';
 
@@ -14,7 +15,7 @@ class Chat extends Component {
 
   handleSend = (e) => {
     this.setState({ messages: [...this.state.messages, this.state.message]})
-    e.preventDefault()
+    let newMessage = this.state.message
     console.log(this.state)
   }
 
@@ -27,7 +28,7 @@ class Chat extends Component {
       <div className="Chat">
         <div className="chatOut">
           { this.state.messages.map((message, i) => 
-            // You should make this a box that displays most recent messages but the box is a set size and doesn't scroll
+            //You should make this a box that displays most recent messages but the box is a set size and doesn't scroll
               <div className="eachMessage" key={i}>{message}</div> )
           } 
         </div>
@@ -36,7 +37,7 @@ class Chat extends Component {
               <div className="theirMessages" key={i+message}>{message}</div> )
           }
         </div>
-        <input className="chatTyping" type="text" ref="textBox" name="message" value={this.state.message} onChange={this.handleChange}/>
+        <input className="chatTyping" type="text" ref="textBox" name="message" value={this.state.message} onChange={this.handleChange} />
         <button id="sendChat" onClick={this.handleSend}>Chat</button>
         <button id="receiveChat" onClick={this.handleReceive}>Chat</button>
       </div>

@@ -1,9 +1,11 @@
 .App {
   display: grid;
-  grid-gap: 15px;
-  grid-template-areas:  "n" "m" "o" "t ""f";
-  grid-template-rows: 10vh 10vh auto 10vh 10vh;
   height: 100vh;
+  grid-gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas:  "n" "m" "o" "t ""f";
+  grid-template-rows: 1fr 1fr 5fr 1fr 2fr;
+  height: 100%;
 }
 
 .PennyNav {

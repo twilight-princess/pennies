@@ -1,34 +1,36 @@
 .Chat > input{
   width: 100%;
-  height: 10vh;
+  height: 6vh;
 }
 
 .chatOut {
   display: flex;
   width: 100%;
+  height: 20vh;
   display: grid;
   grid-gap: 5px;
   grid-auto-columns: minmax(100px, auto);
   grid-auto-rows: auto;
+  overflow: auto;
+  word-wrap: break-word;
+  overscroll-behavior: auto;
 }
 
 .eachMessage {
-  width: 40%;
+  width: 100%;
   justify-content: flex-start;
   border: 1px solid rgb(92, 23, 119);
   border-radius: 10px;
   padding: 5px;
-  margin-left: 10px;
 }
 
 .theirMessages {
-  width: 40%;
+  width: 100%;
   justify-content: flex-end;
   border: 1px solid rgb(85, 223, 85);
   border-radius: 10px;
   padding: 5px;
-  margin-left: 60%;
-  margin-right: 10px;
+  text-align: right;
 }
 
 .Chat > button {
@@ -37,8 +39,10 @@
   color: white;
   border-radius: 10px;
   border: 1px solid white;
+  height: 6vh;
 }
 
 #receiveChat {
+  height: 6vh;
   background-color: rgb(85, 223, 85);
 }
