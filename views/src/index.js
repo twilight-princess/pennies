@@ -7,7 +7,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 //REDUX
 import { Provider } from "react-redux";
-import store from "./redux";
+//import store from "./redux";
 
 //Components & CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,7 +18,7 @@ import './index.css';
 
 render(
   <BrowserRouter>
-    <Provider store={store}>      
+    <Provider>      
       <Switch>
         <Route path="/" exact component={App} />
         <Route path="/chat" component={Chat} />
