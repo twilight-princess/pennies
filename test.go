@@ -1,9 +1,9 @@
 package main
 
 import (
-	"./web"
+	"web"
 )
 
 func main() {
-	web.main()
+	
 }
